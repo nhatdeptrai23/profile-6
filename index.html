@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Web-Page Title -->
+        <title>Toufiq's Portfolio</title>
+
+        <!-- Importing Favicon Icon -->
+        <link rel="icon" type="image/png" href="icons/favicon.png" />
+
+        <!-- Importing Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                font-family: "Poppins", sans-serif;
+            }
+            
+            header {
+                margin-left: 5%;
+                margin-right: 3%;
+                margin-bottom: 100px;
+            }
+            
+            h1 span {
+                color: #d28;
+            }
+            
+            p {
+                color: #858585;
+                font-size: 16px;
+            }
+            
+            footer {
+                font-size: 20px;
+                text-align: center;
+                float: right;
+                width: 100%;
+                height: 200px;
+                background-color: #0b0d17;
+                color: white;
+                padding-bottom: 50px;
+            }
+            
+            /* Global Style ENDS */
+            
+            /* Navigation Bar Styles */
+            /* Added a black background color to the top navigation */
+            .topnav {
+                background-color: #d28;
+                overflow: hidden;
+            }
+            
+            /* Styled the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 25px 30px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            
+            /* Changed the color of links on hover = green */
+            .topnav a:hover {
+                background-color: rgb(0, 252, 134);
+                color: black;
+            }
+            
+            /* Added a color to the active/current link */
+            .topnav a.active {
+                background-color: rgb(122, 0, 243);
+                color: white;
+            }
+            
+            /* Flex container and their bottom margin*/
+            .flexible-container {
+                display: flex;
+                margin-bottom: 150px;
+            }
+            
+            /* Fitting the Divided container and gave them the necessary common styles */
+            .half-width {
+                float: left;
+                width: 45%;
+            }
+            
+            .half-width img {
+                float: left;
+                width: 100%;
+                margin-right: 10px;
+            }
+            
+            /* Top Side Styles */
+            .colored-heading {
+                color: #232320;
+                font-family: "Yeseva One", cursive;
+                font-size: 60px;
+                line-height: 80px;
+                padding-left: 20px;
+                border-left: 8px solid;
+                border-image: linear-gradient(180deg, rgb(252, 0, 176), rgb(247, 3, 125));
+                border-image-slice: 1;
+                margin-top: 150px;
+                padding-left: 2%;
+                letter-spacing: 2px;
+            }
+            
+            /* Each Anchor Button has a common Explore icon */
+            .anchor-btn {
+                width: 50%;
+                height: 100%;
+                text-decoration: none;
+                color: white;
+                padding-left: 10px;
+                background: #d28;
+                background-image: url(../icons/explore.png);
+                background-repeat: no-repeat;
+                background-position: 10px 6px;
+                background-size: 32px;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-weight: 900;
+            }
+            
+            .anchor-btn span {
+                text-align: right;
+                padding-left: 30px;
+            }
+            
+            .image-top {
+                margin-left: 110px;
+            }
+            
+            /* MY Mission Section containing 3 cards with illustration */
+            #mission-heading {
+                color: #232320;
+                font-family: "Yeseva One", cursive;
+                font-size: 50px;
+                line-height: 80px;
+                text-align: center;
+            }
+            
+            .one-third-width {
+                float: left;
+                width: 30%;
+                padding-left: 1.5%;
+                padding-right: 1%;
+                margin-right: 2%;
+                border-radius: 5px;
+            }
+            
+            .one-third-width img {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+            
+            /* Left Mission Card Styles */
+            #left-card {
+                background: rgba(72, 162, 172, 0.241);
+                border-radius: 26px;
+            }
+            
+            /* Middle Mission Card Styles */
+            #middle-card {
+                background: rgba(255, 89, 89, 0.1);
+                border-radius: 26px;
+            }
+            
+            /* Right Mission Card Styles */
+            #right-card {
+                background: #fff4d6;
+                border-radius: 26px;
+            }
+            
+            /* Article section styles */
+            
+            /* "Top Article" Styles */
+            .upper-middle {
+                background-image: url("../images/middle-background.png");
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 15%;
+            }
+            
+            #develop-texts {
+                margin-left: 50px;
+                padding-left: 10%;
+                padding-right: 5%;
+            }
+            
+            .upper-middle img {
+                margin-left: 15%;
+                width: 95%;
+                height: 95%;
+            }
+            
+            /* "Bottom Article" Styles */
+            .lower-middle {
+                background-image: url("../images/middle-background.png");
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+                background-size: 15%;
+                padding-right: 5%;
+                padding-bottom: 100px;
+            }
+            
+            #community-texts {
+                padding-left: 5%;
+                padding-right: 10%;
+            }
+            
+            .lower-middle img {
+                width: 95%;
+                height: 95%;
+                margin-right: 5%;
+            }
+            
+            /* Career Overview Section styles */
+            .experience-section h1 {
+                margin-left: 1%;
+                padding-left: 5%;
+            }
+            
+            .experience-section {
+                float: left;
+                padding-right: 1%;
+                margin-right: 3%;
+                margin-left: 5%;
+                margin-bottom: 150px;
+            }
+            
+            .experience-heading {
+                color: #4b4b4ace;
+                font-family: "Yeseva One", cursive;
+                font-weight: 10;
+                font-size: 35px;
+                text-align: center;
+            }
+            
+            .work-details {
+                color: #d28;
+                padding-left: 3%;
+            }
+            
+            .exp-details {
+                padding: 3%;
+            }
+            
+            .working-years {
+                color: #545451b3;
+                font-size: 20px;
+                font-family: Monospace, Arial, Helvetica, sans-serif;
+            }
+            
+            /* Left Career Card Styles */
+            #left-exp-card {
+                border-left: 8px solid;
+                border-image: linear-gradient(180deg, #fffb7d, #0dd86c);
+                border-image-slice: 1;
+                margin-right: 20px;
+                box-shadow: 12px 15px 32px 1px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+            }
+            
+            /* Middle Career Card Styles */
+            #middle-exp-card {
+                border-left: transparent 8px solid;
+                border-image: linear-gradient(180deg, #eac, #fa0075);
+                border-image-slice: 1;
+                background-color: white;
+                margin-right: 20px;
+                margin-left: 20px;
+            
+                box-shadow: 12px 15px 32px 1px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+            }
+            
+            /* Right Career Card Styles */
+            #right-exp-card {
+                border-left: 8px solid;
+                border-image: linear-gradient(180deg, cyan, blue);
+                border-image-slice: 1;
+                margin-left: 20px;
+                box-shadow: 12px 15px 32px 1px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+            }
+            
+            /* Style of the image of the Career Cards */
+            .exp-card img {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: 90%;
+                height: 220px;
+                box-shadow: 5px 5px 15px rgba(99, 100, 100, 0.514);
+            }
+            
+            /* Footer Styles */
+            #footer-heading {
+                color: #ffffff;
+                font-family: "Yeseva One", cursive;
+                font-size: 60px;
+                line-height: 80px;
+                padding-left: 20px;
+            }
+            
+            #copyright-text{
+                color: rgba(255, 217, 0, 0.926);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- nav section starts -->
+        <nav>
+            <!-- nav text section starts -->
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+            <!-- nav text section ends -->
+        </nav>
+        <!-- nav section Ends -->
+        <main>
+            <!-- main body item starts -->
+            <header>
+                <!-- Header section starts -->
+                <section class="top-banner flexible-container">
+                    <!-- Top Banner section starts -->
+                    <div class="half-width">
+                        <!-- Top Banner Text section starts -->
+                        <h1 class="colored-heading">Hi<br><span>My name is ...</span> !
+                        </h1>
+                        <p class="introduction-info"> My major is front-end web-app development, and I am pursuing a
+                            degree in Computer Science. I can create my projects and save them all in one place in the
+                            cloud. I am Toufiq Alahi, and real-time cooperation is crucial for my team.
+                        </p>
+                        <a class="anchor-btn" target="_blank" href="#"> <span>Explore My
+                                GitHub</span>
+                            <!-- Top Banner Anchor Button for Github -->
+                        </a>
+                        <p><br>Scroll down to explore more about us.</p>
+                    </div>
+                    <!-- Top Banner Text section Ends -->
+
+                    <!-- Top Banner Image section starts -->
+                    <div class="half-width image-top">
+                        <img src="my-images/pic2.png" alt="">
+                    </div>
+                    <!-- Top Banner Image section Ends -->
+                </section>
+                <!-- Top Banner section Ends -->
+
+                <!-- My Mission section starts -->
+                <section class="mission-section">
+                    <h1 id="mission-heading">My Mission in<span class="color-orange"> 2022</span></h1>
+                    <!-- Flex Container Starts -->
+                    <div class="flexible-container">
+                        <!-- My Mission LEFT-CARD starts -->
+                        <div class="one-third-width" id="left-card">
+                            <img src="illustrations/illustrator-1.png" alt=""> <!-- LEFT-CARD image -->
+                            <h2 class="card-details"> Mission </h2>
+                            <p>I know this course will require me to work a set number of hours every day. I will always
+                                finish every module, milestone, and assigned task on time in the upcoming months.
+                            </p>
+                        </div>
+                        <!-- My Mission LEFT-CARD Ends -->
+
+                        <!-- My Mission Middle-CARD Starts -->
+                        <div class="one-third-width" id="middle-card">
+                            <img src="illustrations/illustrator-2.png" alt=""> <!-- Middle-CARD image -->
+                            <h2 class="card-details"> Vision </h2>
+                            <p>Not only in 2022 but for this whole decade and maybe in upcoming decades, the future of
+                                Web development is bright. I need to have the right skills in Web development,
+                                and I'm good to go.
+                            </p>
+                        </div>
+                        <!-- My Mission Middle-CARD Ends -->
+
+                        <!-- My Mission Right-CARD Starts -->
+                        <div class="one-third-width" id="right-card">
+                            <img src="illustrations/illustrator-3.png" alt=""> <!-- Right-CARD image -->
+                            <h2 class="card-details"> Goals </h2>
+                            <p> I will work efficiently and will go above and beyond when my academic pressure arises.
+                                While working on an important task, I will surely increase my coding hours to produce my
+                                best work.
+                            </p>
+                        </div>
+                        <!-- My Mission Right-CARD Ends -->
+                    </div>
+                    <!-- Flex Container Ends -->
+                </section>
+                <!-- My Mission section Ends -->
+            </header>
+            <!-- Header section Ends -->
+
+            <!-- Article section starts -->
+            <article>
+                <!-- "Top Article" area starts -->
+                <section class="upper-middle flexible-container">
+                    <!-- "Top Article" Image starts -->
+                    <div class="half-width">
+                        <img src="pictures/coding.png" alt="">
+                    </div>
+                    <!-- "Top Article" Image Ends -->
+
+                    <!-- "Top Article" Texts starts -->
+                    <div class="half-width" id="develop-texts">
+                        <h1 class="colored-heading"> <span class="color-orange">Develop</span> <br> Without Limits</h1>
+                        <p class="introduction-info">
+                            We come from a collective experience and strong belief in coding, social and emotional
+                            learning, healing, social justice, and fun. We are passionate about helping teams build
+                            internal capabilities to provide a better programming experience. This is a great way to get
+                            the most out of your money, retain great employees and empower youth.
+                        </p>
+                        <a class="anchor-btn" target="_blank"
+                            href="https://www.linkedin.com/in/toufiq-alahi-9ab77a167"><span>Our Creative
+                                Services</span></a>
+                    </div>
+                    <!-- "Top Article" Texts Ends -->
+                </section>
+                <!-- "Top Article" area Ends -->
+
+                <!-- "Bottom Article" area starts -->
+                <section class="lower-middle flexible-container">
+                    <!-- "Bottom Article" Texts starts -->
+                    <div class="half-width" id="community-texts">
+                        <h1 class="colored-heading">Know (Y)our<br><span class="color-orange">Global Community</span>
+                        </h1>
+                        <p class="introduction-info">
+                            Our core team has deep experience working with youth. It includes front-end developers,
+                            System Engineers, former classroom teachers, social workers, and program and curriculum
+                            experts. <br> We embrace and expect ambiguity and iteration. To develop transformative
+                            learning experiences that simultaneously build capacity while also generating a
+                            user-friendly product is not a clear-cut process. We balance creativity and analysis and use
+                            an iterative learning-by-doing process with clients to support innovation.
+                        </p>
+                        <a class="anchor-btn" target="_blank" href="https://twitter.com/TOUFIQALAHI"><span>Meet (Y)our
+                                Community</span></a>
+                    </div>
+                    <!-- "Bottom Article" Texts Ends -->
+
+                    <!-- "Bottom Article" Image starts -->
+                    <div class="half-width">
+                        <img src="pictures/project.png" alt="">
+                    </div>
+                    <!-- "Bottom Article" Image Ends -->
+                </section>
+                <!-- "Bottom Article" area Ends -->
+            </article>
+            <!-- Article section Ends -->
+
+            <!-- Career Overview Section starts -->
+            <section class="experience-section">
+                <h1 class="colored-heading"><span class="color-orange">Career</span> Overview: </h1>
+                <!-- Career Overview Heading -->
+                <!-- Career Overview Cards start -->
+                <div class="flexible-container">
+                    <!-- Left Career Card starts -->
+                    <div class="exp-card" id="left-exp-card">
+                        <h1 class="experience-heading">PowerPoint Designer</h1>
+                        <img src="past-project-images/powerPoint.png" alt="">
+                        <h3 class="work-details"> Business Pitch Designer on Upwork<br> <span
+                                class="working-years">2017-2018</span> </h3>
+                        <p class="exp-details">I can combine stellar design skills with solid business expertise. I have
+                            a solid understanding of venture capital, investment presentations, business analysis,
+                            marketing, sales, and fundraising for startups. I have made over 100 decks of cards for many
+                            different clients and purposes. Pitching Floor, Board of Directors Meeting, Company Slides,
+                            Online Course, Marketing Materials, Sales Materials, ICO Materials I have experience in all
+                            types of slides presentation/documentation you may need.</p>
+                    </div>
+                    <!-- Left Career Card Ends -->
+
+                    <!-- Middle Career Card starts -->
+                    <div class="exp-card" id="middle-exp-card">
+                        <h1 class="experience-heading">Pro Voice-Over Artist</h1>
+                        <img src="past-project-images/Voice-Over.png" alt="">
+                        <h3 class="work-details">Animation Voice-Over Artist on Upwork<br><span
+                                class="working-years">2017-2019</span></h3>
+                        <p class="exp-details">
+                            I have experience and education in voice-over and audio production work. I have helped
+                            produce several voice-over projects such as Animes, Cartoons, promos, and Bangla audiobooks.
+                            I'm professionally trained through a Training program. I was also educated in
+                            audio/video production and editing through the digital media, art, and design program. I
+                            combine hard-earned experience and well-honed talent to produce some of the industry's most
+                            dynamic and varietal Voice over's.
+                        </p>
+                    </div>
+                    <!-- Middle Career Card Ends -->
+
+                    <!-- Right Career Card starts -->
+                    <div class="exp-card" id="right-exp-card">
+                        <h1 class="experience-heading">Google Ads Expert</h1>
+                        <img src="past-project-images/Google-Ads.png" alt="">
+                        <h3 class="work-details">Certified Google Ads Campaign Manager<br><span
+                                class="working-years">2020-2021</span></h3>
+                        <p class="exp-details">Over the years I've proven my abilities and skills to provide the highest
+                            possible quality for my clients and bring their accounts to another level where their
+                            revenue has significantly grown. To point out, while I was in charge, the lowest ROAS my
+                            client had was 2.8x and the highest 10x. We stick somewhere between 4/5x most of the time. I
+                            think the margin of their products was too low, and they invested too much in unnecessary
+                            freelancers and channels. However, the client was very professional, and I've enjoyed
+                            working with them.</p>
+                    </div>
+                    <!-- Right Career Card Ends -->
+                </div>
+                <!-- Career Overview Cards End -->
+            </section>
+            <!-- Career Overview Section Ends -->
+        </main>
+        <!-- main body item Ends -->
+
+        <!-- Footer starts -->
+        <footer>
+            <h1 id="footer-heading">Mission<span class="color-orange"> 2022</span> !</h1>
+            <p>Hard work, Perseverance, and Determination for 2022</p>
+            <h6 id="copyright-text">© 2022.</h6>
+        </footer>
+        <!-- Footer Ends -->
+    </body>
+
+</html>
